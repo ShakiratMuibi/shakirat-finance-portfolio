@@ -1,5 +1,4 @@
 // src/pages/Home.tsx
-import React from "react"
 import { Link } from "react-router-dom"
 import { Briefcase } from "lucide-react"
 import { PROJECTS } from "../data/projects"
@@ -14,6 +13,7 @@ export default function Home() {
         <h2 className="text-2xl font-semibold mt-10 flex items-center gap-2">
           <Briefcase className="h-5 w-5" /> Projects
         </h2>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
           {PROJECTS.map((p) => (
             <div key={p.slug} className="rounded-2xl p-5 bg-white/5 border border-white/10">

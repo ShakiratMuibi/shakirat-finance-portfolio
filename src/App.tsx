@@ -1,5 +1,4 @@
-import React, { useState } from "react"
-import { Briefcase, ChevronDown, ChevronUp, Globe, CheckCircle2 } from "lucide-react"
+import React from "react";
 
 // ---- Import images so Vite bundles them correctly (MUST be at top) ----
 import heroImg from "./assets/hero.jpeg"
@@ -8,12 +7,6 @@ import imgCredit from "./assets/credit-risk.jpeg"
 import imgRecon from "./assets/reconciliation.jpeg"
 import imgDashboard from "./assets/dashboard.jpeg"
 import financeImg from "./assets/finance.jpg"
-
-/** ====== THEME ====== */
-const BG_COLOR = "bg-[#fdfcf7]" // Cream background
-const CARD = "bg-white border border-black/10 rounded-2xl"
-const CHIP = "text-xs inline-block px-3 py-1 rounded-full bg-[#1e3a5f]/10 border border-[#1e3a5f]/20 text-[#1e3a5f]"
-
 
 /** ====== PROFILE ====== */
 const PROFILE = {
@@ -209,7 +202,7 @@ function ProjectCarousel({ items }: { items: Project[] }) {
   const [paused, setPaused] = React.useState(false)
   const total = items.length
 
-  const go = (i: number) => setIndex((prev) => (i + total) % total)
+  const go = (i: number) => setIndex((i + total) % total);
 
   // Autoplay (pause on hover)
   React.useEffect(() => {

@@ -202,7 +202,7 @@ function ProjectCarousel({ items }: { items: Project[] }) {
   const [paused, setPaused] = React.useState(false)
   const total = items.length
 
-  const go = (i: number) => setIndex((i + total) % total);
+const go = (i: number) => setIndex((i + total) % total)
 
   // Autoplay (pause on hover)
   React.useEffect(() => {
